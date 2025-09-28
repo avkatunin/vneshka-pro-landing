@@ -50,12 +50,15 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-background">
-      <div className="container mx-auto px-6">
-        {/* Solution Header */}
+    <section className="py-20 bg-gradient-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-accent rounded-full blur-3xl opacity-10"></div>
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-primary rounded-full blur-3xl opacity-10"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">
-            <span className="bg-gradient-secondary bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 fade-in-up">
+            <span className="text-shimmer">
               ВнешкаПРО поможет тебе забыть об этих проблемах
             </span>
           </h2>
@@ -67,8 +70,8 @@ const SolutionSection = () => {
             <div className="lg:col-span-7">
               <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                 {steps.map((step, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:shadow-glow transition-all duration-300">
+                  <div key={index} className={`text-center group fade-in-up stagger-${index + 1}`}>
+                    <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 mx-auto hover-glow">
                       <span className="text-2xl font-bold text-primary-foreground">{step.number}</span>
                     </div>
                     <h3 className="text-lg font-semibold mb-2 text-foreground">
@@ -83,13 +86,13 @@ const SolutionSection = () => {
             </div>
             <div className="lg:col-span-5">
               <div className="grid grid-cols-1 gap-4">
-                <div className="bg-card rounded-2xl p-6 border border-border shadow-card h-32 flex items-center justify-center">
+                <div className="bg-card rounded-3xl p-6 border border-border shadow-card h-32 flex items-center justify-center hover-lift">
                   <span className="text-muted-foreground text-center">📱 Скриншот шага 1-2</span>
                 </div>
-                <div className="bg-card rounded-2xl p-6 border border-border shadow-card h-32 flex items-center justify-center">
+                <div className="bg-card rounded-3xl p-6 border border-border shadow-card h-32 flex items-center justify-center hover-lift">
                   <span className="text-muted-foreground text-center">🔗 Скриншот шага 3-4</span>
                 </div>
-                <div className="bg-card rounded-2xl p-6 border border-border shadow-card h-32 flex items-center justify-center">
+                <div className="bg-card rounded-3xl p-6 border border-border shadow-card h-32 flex items-center justify-center hover-lift">
                   <span className="text-muted-foreground text-center">📊 Скриншот шага 5</span>
                 </div>
               </div>
@@ -97,10 +100,9 @@ const SolutionSection = () => {
           </div>
         </div>
 
-        {/* Analytics Features */}
-        <div className="bg-card rounded-3xl p-8 mb-20 border border-border shadow-card">
-          <h3 className="text-3xl font-bold mb-8 text-center">
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
+        <div className="bg-card rounded-3xl p-8 mb-20 border border-border shadow-card backdrop-blur-sm">
+          <h3 className="text-3xl lg:text-4xl font-bold mb-8 text-center">
+            <span className="text-shimmer">
               Что будет в аналитике?
             </span>
           </h3>
@@ -131,8 +133,8 @@ const SolutionSection = () => {
 
         {/* Benefits */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold">
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
+          <h3 className="text-3xl lg:text-4xl font-bold">
+            <span className="text-shimmer">
               В итоге с ВнешкаПРО:
             </span>
           </h3>
@@ -141,9 +143,9 @@ const SolutionSection = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="p-8 rounded-2xl bg-card border border-border hover:shadow-card transition-all duration-300 hover:-translate-y-2"
+              className={`p-8 rounded-3xl bg-card border border-border hover-lift transition-all duration-300 backdrop-blur-sm fade-in-up stagger-${index + 1}`}
             >
-              <div className="w-12 h-12 bg-gradient-secondary rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gradient-secondary rounded-xl flex items-center justify-center mb-6 hover-glow">
                 <span className="text-2xl">✨</span>
               </div>
               <h4 className="text-xl font-semibold mb-4 text-foreground">

@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 const OfferSection = () => {
   return (
     <section className="py-20 bg-card">
-      <div className="container mx-auto px-6">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-hero rounded-full blur-3xl opacity-10"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-primary p-12 rounded-3xl shadow-glow border border-border/50">
             <div className="space-y-8">

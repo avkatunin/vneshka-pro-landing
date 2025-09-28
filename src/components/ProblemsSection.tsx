@@ -16,7 +16,10 @@ const ProblemsSection = () => {
 
   return (
     <section className="py-20 bg-card">
-      <div className="container mx-auto px-6">
+      {/* Background decoration */}
+      <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-secondary rounded-full blur-3xl opacity-10"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
             <span className="bg-gradient-accent bg-clip-text text-transparent">
