@@ -63,20 +63,37 @@ const SolutionSection = () => {
 
         {/* How it works */}
         <div className="mb-20">
-          <div className="grid lg:grid-cols-5 gap-6">
-            {steps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:shadow-glow transition-all duration-300">
-                  <span className="text-2xl font-bold text-primary-foreground">{step.number}</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {step.description}
-                </p>
+          <div className="grid lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                {steps.map((step, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:shadow-glow transition-all duration-300">
+                      <span className="text-2xl font-bold text-primary-foreground">{step.number}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {step.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="lg:col-span-5">
+              <div className="grid grid-cols-1 gap-4">
+                <div className="bg-card rounded-2xl p-6 border border-border shadow-card h-32 flex items-center justify-center">
+                  <span className="text-muted-foreground text-center">📱 Скриншот шага 1-2</span>
+                </div>
+                <div className="bg-card rounded-2xl p-6 border border-border shadow-card h-32 flex items-center justify-center">
+                  <span className="text-muted-foreground text-center">🔗 Скриншот шага 3-4</span>
+                </div>
+                <div className="bg-card rounded-2xl p-6 border border-border shadow-card h-32 flex items-center justify-center">
+                  <span className="text-muted-foreground text-center">📊 Скриншот шага 5</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
