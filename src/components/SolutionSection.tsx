@@ -79,35 +79,39 @@ const SolutionSection = () => {
           </h2>
         </div>
 
-        {/* How it works - 3 tiles */}
-        <div className="mb-20 space-y-8">
-          {tiles.map((tile, tileIndex) => (
-            <div 
-              key={tileIndex}
-              className="grid lg:grid-cols-2 gap-8 items-center bg-card rounded-3xl p-8 border border-border shadow-card"
-            >
-              <div className="space-y-6">
-                {tile.steps.map((step, stepIndex) => (
-                  <div key={stepIndex} className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-xl font-bold text-primary-foreground">{step.number}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-1 text-foreground">
-                        {step.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {step.description}
-                      </p>
-                    </div>
+        {/* How it works - single tile with sections */}
+        <div className="mb-20">
+          <div className="bg-card rounded-3xl p-8 border border-border shadow-card">
+            {tiles.map((tile, tileIndex) => (
+              <div key={tileIndex}>
+                <div className="grid lg:grid-cols-2 gap-8 items-center py-8">
+                  <div className="space-y-6">
+                    {tile.steps.map((step, stepIndex) => (
+                      <div key={stepIndex} className="flex gap-4 items-start">
+                        <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                          <span className="text-xl font-bold text-primary-foreground">{step.number}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold mb-1 text-foreground">
+                            {step.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm">
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                  <div className="bg-background/50 rounded-2xl p-12 border border-border min-h-[300px] flex items-center justify-center">
+                    <span className="text-muted-foreground text-center text-lg">{tile.placeholder}</span>
+                  </div>
+                </div>
+                {tileIndex < tiles.length - 1 && (
+                  <div className="border-t border-border my-4"></div>
+                )}
               </div>
-              <div className="bg-background/50 rounded-2xl p-12 border border-border min-h-[300px] flex items-center justify-center">
-                <span className="text-muted-foreground text-center text-lg">{tile.placeholder}</span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="bg-card rounded-3xl p-8 mb-20 border border-border shadow-card backdrop-blur-sm">
