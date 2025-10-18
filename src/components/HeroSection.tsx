@@ -26,8 +26,10 @@ const HeroSection = () => {
             </p>
             
             <div className="fade-in-up stagger-3">
-              <Button variant="hero" size="lg" className="text-xl px-12 py-8 hover-glow font-bold">
-                Попробовать бесплатно
+              <Button variant="hero" size="lg" className="text-xl px-12 py-8 font-bold" asChild>
+                <a href="https://app.vneshka.pro/" target="_blank" rel="noopener noreferrer">
+                  Попробовать бесплатно
+                </a>
               </Button>
             </div>
           </div>

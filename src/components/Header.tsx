@@ -8,8 +8,10 @@ const Header = () => {
           <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             ВнешкаПРО
           </div>
-          <Button variant="hero" size="lg">
-            Попробовать бесплатно
+          <Button variant="hero" size="lg" asChild>
+            <a href="https://app.vneshka.pro/" target="_blank" rel="noopener noreferrer">
+              Попробовать бесплатно
+            </a>
           </Button>
         </div>
       </div>

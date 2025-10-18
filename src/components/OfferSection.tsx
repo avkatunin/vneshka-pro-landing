@@ -32,16 +32,13 @@ const OfferSection = () => {
                 variant="cta" 
                 size="lg" 
                 className="text-xl px-12 py-6 bg-background text-foreground hover:bg-background/90"
+                asChild
               >
-                Попробовать бесплатно
+                <a href="https://app.vneshka.pro/" target="_blank" rel="noopener noreferrer">
+                  Попробовать бесплатно
+                </a>
               </Button>
             </div>
-          </div>
-          
-          <div className="mt-12 text-muted-foreground">
-            <p className="text-lg">
-              Присоединяйтесь к селлерам, которые уже контролируют свою рекламу
-            </p>
           </div>
         </div>
       </div>

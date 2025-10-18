@@ -32,11 +32,8 @@ const ProblemsSection = () => {
           {problems.map((problem, index) => (
             <div 
               key={index}
-              className="p-8 rounded-2xl bg-background border border-border hover:shadow-card transition-all duration-300 hover:-translate-y-2"
+              className="p-8 rounded-2xl bg-background border-2 border-orange-400 hover:shadow-card transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="w-12 h-12 bg-destructive/20 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl">⚠️</span>
-              </div>
               <h3 className="text-xl font-semibold mb-4 text-foreground">
                 {problem.title}
               </h3>

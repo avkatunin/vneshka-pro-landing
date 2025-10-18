@@ -1,29 +1,44 @@
 const SolutionSection = () => {
-  const steps = [
+  const tiles = [
     {
-      number: "1",
-      title: "Создаешь запись о новой рекламной кампании",
-      description: "в личном кабинете"
+      steps: [
+        {
+          number: "1",
+          title: "Создаешь запись о новой рекламной кампании",
+          description: "в личном кабинете"
+        },
+        {
+          number: "2", 
+          title: "Получаешь диплинк на свой товар",
+          description: "готовый для размещения"
+        }
+      ],
+      placeholder: "📱 Скриншот шага 1-2"
     },
     {
-      number: "2", 
-      title: "Получаешь диплинк на свой товар",
-      description: "готовый для размещения"
+      steps: [
+        {
+          number: "3",
+          title: "При размещении рекламы просишь указать",
+          description: "сгенерированный диплинк"
+        },
+        {
+          number: "4",
+          title: "Люди по клику сразу переходят на твой товар",
+          description: "а не вбивают артикул в поиске"
+        }
+      ],
+      placeholder: "🔗 Скриншот шага 3-4"
     },
     {
-      number: "3",
-      title: "При размещении рекламы просишь указать",
-      description: "сгенерированный диплинк"
-    },
-    {
-      number: "4",
-      title: "Люди по клику сразу переходят на твой товар",
-      description: "а не вбивают артикул в поиске"
-    },
-    {
-      number: "5",
-      title: "В личном кабинете получаешь статистику",
-      description: "по каждой рекламной кампании"
+      steps: [
+        {
+          number: "5",
+          title: "В личном кабинете получаешь статистику",
+          description: "по каждой рекламной кампании"
+        }
+      ],
+      placeholder: "📊 Скриншот шага 5"
     }
   ];
 
@@ -64,40 +79,35 @@ const SolutionSection = () => {
           </h2>
         </div>
 
-        {/* How it works */}
-        <div className="mb-20">
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7">
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                {steps.map((step, index) => (
-                  <div key={index} className={`text-center group fade-in-up stagger-${index + 1}`}>
-                    <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 mx-auto hover-glow">
-                      <span className="text-2xl font-bold text-primary-foreground">{step.number}</span>
+        {/* How it works - 3 tiles */}
+        <div className="mb-20 space-y-8">
+          {tiles.map((tile, tileIndex) => (
+            <div 
+              key={tileIndex}
+              className="grid lg:grid-cols-2 gap-8 items-center bg-card rounded-3xl p-8 border border-border shadow-card"
+            >
+              <div className="space-y-6">
+                {tile.steps.map((step, stepIndex) => (
+                  <div key={stepIndex} className="flex gap-4 items-start">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                      <span className="text-xl font-bold text-primary-foreground">{step.number}</span>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 text-foreground">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {step.description}
-                    </p>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-1 text-foreground">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="lg:col-span-5">
-              <div className="grid grid-cols-1 gap-4">
-                <div className="bg-card rounded-3xl p-6 border border-border shadow-card h-32 flex items-center justify-center hover-lift">
-                  <span className="text-muted-foreground text-center">📱 Скриншот шага 1-2</span>
-                </div>
-                <div className="bg-card rounded-3xl p-6 border border-border shadow-card h-32 flex items-center justify-center hover-lift">
-                  <span className="text-muted-foreground text-center">🔗 Скриншот шага 3-4</span>
-                </div>
-                <div className="bg-card rounded-3xl p-6 border border-border shadow-card h-32 flex items-center justify-center hover-lift">
-                  <span className="text-muted-foreground text-center">📊 Скриншот шага 5</span>
-                </div>
+              <div className="bg-background/50 rounded-2xl p-12 border border-border min-h-[300px] flex items-center justify-center">
+                <span className="text-muted-foreground text-center text-lg">{tile.placeholder}</span>
               </div>
             </div>
-          </div>
+          ))}
         </div>
 
         <div className="bg-card rounded-3xl p-8 mb-20 border border-border shadow-card backdrop-blur-sm">
@@ -143,11 +153,8 @@ const SolutionSection = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className={`p-8 rounded-3xl bg-card border border-border hover-lift transition-all duration-300 backdrop-blur-sm fade-in-up stagger-${index + 1}`}
+              className={`p-8 rounded-3xl bg-card border-2 border-cyan-400 hover-lift transition-all duration-300 backdrop-blur-sm fade-in-up stagger-${index + 1}`}
             >
-              <div className="w-12 h-12 bg-gradient-secondary rounded-xl flex items-center justify-center mb-6 hover-glow">
-                <span className="text-2xl">✨</span>
-              </div>
               <h4 className="text-xl font-semibold mb-4 text-foreground">
                 {benefit.title}
               </h4>
