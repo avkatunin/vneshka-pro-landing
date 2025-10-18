@@ -23,39 +23,32 @@ const OfferSection = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-6 border-2 border-border hover:border-primary transition-all shadow-card hover:shadow-lg"
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-foreground mb-2">
-                    {plan.deeplinks}
-                  </div>
-                  <div className="text-sm text-muted-foreground mb-4">
-                    {plan.deeplinks === 1 ? 'диплинк' : 'диплинков'}
-                  </div>
-                  <div className="text-4xl font-bold text-primary mb-2">
-                    {plan.price}₽
-                  </div>
-                  {plan.discount && (
-                    <div className="inline-block bg-accent px-3 py-1 rounded-full">
-                      <span className="text-accent-foreground text-sm font-semibold">
+          <div className="bg-card rounded-2xl p-8 border-2 border-border shadow-card mb-12">
+            <div className="space-y-4">
+              {plans.map((plan, index) => (
+                <div key={index} className="flex items-center justify-between py-4 border-b border-border last:border-b-0">
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-2xl font-bold text-foreground">
+                      {plan.deeplinks} {plan.deeplinks === 1 ? 'диплинк' : 'диплинков'}
+                    </span>
+                    {plan.discount && (
+                      <span className="bg-accent px-3 py-1 rounded-full text-accent-foreground text-sm font-semibold">
                         -{plan.discount}%
                       </span>
-                    </div>
-                  )}
+                    )}
+                  </div>
+                  <div className="text-3xl font-bold text-primary">
+                    {plan.price}₽
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="text-center">
             <Button 
-              variant="cta" 
               size="lg" 
-              className="text-xl px-12 py-6"
+              className="text-xl px-12 py-6 bg-gradient-cta text-white hover:opacity-90 transition-opacity"
               asChild
             >
               <a href="https://app.vneshka.pro/" target="_blank" rel="noopener noreferrer">
