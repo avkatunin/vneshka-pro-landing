@@ -21,7 +21,7 @@ const Footer = () => {
             Свяжись с нами в Telegram
           </a>
           <p className="text-sm text-muted-foreground pt-4">
-            © 2024 ВнешкаПРО. Все права защищены.
+            © 2025 ВнешкаПРО. Все права защищены.
           </p>
         </div>
       </div>
