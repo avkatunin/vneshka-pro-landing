@@ -12,7 +12,7 @@ const Footer = () => {
             Аналитика внешней рекламы для селлеров маркетплейсов
           </p>
           <a
-            href="https://t.me/your_bot"
+            href="https://t.me/vneshkapro"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-secondary text-secondary-foreground rounded-xl transition-all duration-300 hover:scale-105 font-semibold"
