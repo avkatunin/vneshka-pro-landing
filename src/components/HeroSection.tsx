@@ -32,7 +32,7 @@ const HeroSection = () => {
               менеджеров маркетплейсов.
             </p>
 
-            <div className="fade-in-up  stagger-3">
+            <div className="fade-in-up stagger-3">
               <Button
                 variant="hero"
                 size="lg"
