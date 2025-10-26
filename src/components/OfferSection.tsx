@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 
 const OfferSection = () => {
   const plans = [
-    { deeplinks: 1, price: 200, discount: null },
-    { deeplinks: 5, price: 899, discount: 10 },
-    { deeplinks: 10, price: 1599, discount: 20 },
-    { deeplinks: 20, price: 2799, discount: 30 },
+    { deeplinks: 1, price: 299, discount: null },
+    { deeplinks: 5, price: 1349, discount: 10 },
+    { deeplinks: 10, price: 2399, discount: 20 },
+    { deeplinks: 20, price: 4199, discount: 30 },
   ];
 
   return (
@@ -47,8 +47,9 @@ const OfferSection = () => {
 
           <div className="text-center">
             <Button 
+              variant="hero" 
               size="lg" 
-              className="text-xl px-12 py-6 bg-gradient-cta text-white hover:opacity-90 transition-opacity"
+              className="text-xl px-12 py-8 font-bold"
               asChild
             >
               <a href="https://app.vneshka.pro/" target="_blank" rel="noopener noreferrer">
