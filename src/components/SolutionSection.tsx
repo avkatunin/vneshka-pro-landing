@@ -1,3 +1,7 @@
+import step12 from "@/assets/step-1-2.png";
+import step34 from "@/assets/step-3-4.png";
+import step5 from "@/assets/step-5.png";
+
 const SolutionSection = () => {
   const tiles = [
     {
@@ -13,7 +17,7 @@ const SolutionSection = () => {
           description: "готовый для размещения"
         }
       ],
-      placeholder: "📱 Скриншот шага 1-2"
+      image: step12
     },
     {
       steps: [
@@ -28,7 +32,7 @@ const SolutionSection = () => {
           description: "а не вбивают артикул в поиске"
         }
       ],
-      placeholder: "🔗 Скриншот шага 3-4"
+      image: step34
     },
     {
       steps: [
@@ -38,7 +42,7 @@ const SolutionSection = () => {
           description: "очищенную от ботов и накруток"
         }
       ],
-      placeholder: "📊 Скриншот шага 5"
+      image: step5
     }
   ];
 
@@ -102,8 +106,12 @@ const SolutionSection = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="bg-background/50 rounded-2xl p-12 border border-border min-h-[300px] flex items-center justify-center">
-                    <span className="text-muted-foreground text-center text-lg">{tile.placeholder}</span>
+                  <div className="bg-background/50 rounded-2xl p-4 border border-border min-h-[300px] flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={tile.image} 
+                      alt={`Скриншот шагов ${tile.steps.map(s => s.number).join('-')}`}
+                      className="w-full h-auto rounded-lg object-contain"
+                    />
                   </div>
                 </div>
                 {tileIndex < tiles.length - 1 && (
