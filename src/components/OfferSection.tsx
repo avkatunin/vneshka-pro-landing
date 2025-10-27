@@ -26,10 +26,14 @@ const OfferSection = () => {
           <div className="bg-card rounded-2xl p-8 border-2 border-border shadow-card mb-12">
             <div className="space-y-4">
               {plans.map((plan, index) => (
-                <div key={index} className="flex items-center justify-between py-4 border-b border-border last:border-b-0">
+                <div
+                  key={index}
+                  className="flex items-center justify-between py-4 border-b border-border last:border-b-0"
+                >
                   <div className="flex items-baseline gap-3">
                     <span className="text-2xl font-bold text-foreground">
-                      {plan.deeplinks} {plan.deeplinks === 1 ? 'диплинк' : 'диплинков'}
+                      {plan.deeplinks}{" "}
+                      {plan.deeplinks === 1 ? "диплинк" : "диплинков"}
                     </span>
                     {plan.discount && (
                       <span className="bg-accent px-3 py-1 rounded-full text-accent-foreground text-sm font-semibold">
@@ -46,13 +50,16 @@ const OfferSection = () => {
           </div>
 
           <div className="text-center">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-xl px-12 py-8 font-bold"
+            <Button
+              size="lg"
+              className="text-xl px-12 py-6 bg-gradient-cta text-white hover:opacity-90 transition-opacity"
               asChild
             >
-              <a href="https://app.vneshka.pro/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://app.vneshka.pro/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Попробовать бесплатно
               </a>
             </Button>
