@@ -108,14 +108,14 @@ const SolutionSection = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="bg-background/50 rounded-2xl p-4 border border-border min-h-[300px] flex items-center justify-center overflow-hidden">
+                  <div className="bg-background/50 rounded-2xl p-4 border border-border h-[300px] flex items-center justify-center overflow-hidden">
                     <video 
                       src={tile.video}
                       autoPlay
                       loop
                       muted
                       playsInline
-                      className="w-full h-auto rounded-lg object-contain"
+                      className="w-full h-full rounded-lg object-contain"
                     />
                   </div>
                 </div>
