@@ -1,4 +1,4 @@
-import step12 from "@/assets/step-1-2.png";
+import step12 from "@/assets/step-1-2.gif";
 import step34 from "@/assets/step-3-4.png";
 import step5 from "@/assets/step-5.png";
 
