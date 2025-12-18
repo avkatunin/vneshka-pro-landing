@@ -1,4 +1,4 @@
-import step12 from "@/assets/step-1-2.gif";
+import step12Video from "@/assets/step-1-2.mp4";
 import step34 from "@/assets/step-3-4.png";
 import step5 from "@/assets/step-5.png";
 
@@ -17,7 +17,7 @@ const SolutionSection = () => {
           description: "готовый для размещения"
         }
       ],
-      image: step12
+      video: step12Video
     },
     {
       steps: [
@@ -107,11 +107,22 @@ const SolutionSection = () => {
                     ))}
                   </div>
                   <div className="bg-background/50 rounded-2xl p-4 border border-border min-h-[300px] flex items-center justify-center overflow-hidden">
-                    <img 
-                      src={tile.image} 
-                      alt={`Скриншот шагов ${tile.steps.map(s => s.number).join('-')}`}
-                      className="w-full h-auto rounded-lg object-contain"
-                    />
+                    {'video' in tile ? (
+                      <video 
+                        src={tile.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-auto rounded-lg object-contain"
+                      />
+                    ) : (
+                      <img 
+                        src={tile.image} 
+                        alt={`Скриншот шагов ${tile.steps.map(s => s.number).join('-')}`}
+                        className="w-full h-auto rounded-lg object-contain"
+                      />
+                    )}
                   </div>
                 </div>
                 {tileIndex < tiles.length - 1 && (
