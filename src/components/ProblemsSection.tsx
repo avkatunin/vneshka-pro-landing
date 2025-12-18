@@ -1,17 +1,8 @@
 const ProblemsSection = () => {
   const problems = [
-    {
-      title: "Бюджет утекает в никуда",
-      description: "Платишь блогеру, но не знаешь, сколько уникальных переходов и сколько из них реальные."
-    },
-    {
-      title: "Просмотры — это иллюзия эффективности",
-      description: "Инфлюенсеры показывают охваты, которые не бьются с кликами и продажами."
-    },
-    {
-      title: "Накрутка скрывает правду",
-      description: "Боты и фейковые клики искажают отчёты, ты платишь за пустой трафик."
-    }
+    "Платишь за внешнее продвижение, но не понимаешь, сколько людей реально заинтересовалось продуктом",
+    "Оценки исходя из охватов не бьются с реальными кликами и продажами",
+    "Тратишь время на ручной контроль и учет внешних продвижений"
   ];
 
   return (
@@ -34,11 +25,8 @@ const ProblemsSection = () => {
               key={index}
               className="p-8 rounded-2xl bg-background border-2 border-orange-400 hover:shadow-card transition-all duration-300 hover:-translate-y-2"
             >
-              <h3 className="text-xl font-semibold mb-4 text-foreground">
-                {problem.title}
-              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {problem.description}
+                {problem}
               </p>
             </div>
           ))}
