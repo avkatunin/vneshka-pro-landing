@@ -1,6 +1,7 @@
+import addSkuVideo from "@/assets/add-sku.mp4";
 import step12Video from "@/assets/step-1-2.mp4";
-import step34 from "@/assets/step-3-4.png";
-import step5 from "@/assets/step-5.png";
+import dlinkVideo from "@/assets/dlink.mp4";
+import analyticsVideo from "@/assets/analytics.mp4";
 
 const SolutionSection = () => {
   const tiles = [
@@ -8,11 +9,21 @@ const SolutionSection = () => {
       steps: [
         {
           number: "1",
+          title: "Добавляешь товары",
+          description: "Без ограничений на количество"
+        }
+      ],
+      video: addSkuVideo
+    },
+    {
+      steps: [
+        {
+          number: "2",
           title: "Создаешь запись о новой рекламной кампании",
           description: "в личном кабинете"
         },
         {
-          number: "2", 
+          number: "3", 
           title: "Получаешь диплинк на свой товар",
           description: "готовый для размещения"
         }
@@ -22,27 +33,27 @@ const SolutionSection = () => {
     {
       steps: [
         {
-          number: "3",
+          number: "4",
           title: "При размещении рекламы просишь указать",
           description: "сгенерированный диплинк"
         },
         {
-          number: "4",
+          number: "5",
           title: "Люди по клику сразу переходят на твой товар",
           description: "а не вбивают артикул в поиске"
         }
       ],
-      image: step34
+      video: dlinkVideo
     },
     {
       steps: [
         {
-          number: "5",
+          number: "6",
           title: "В личном кабинете получаешь статистику",
           description: "очищенную от ботов и накруток"
         }
       ],
-      image: step5
+      video: analyticsVideo
     }
   ];
 
@@ -55,8 +66,8 @@ const SolutionSection = () => {
 
   const benefits = [
     "Видишь точное количество реальных переходов на продукт по каждой рекламной кампании",
-    "Система отсекает ботов и фейковый трафик, показывая только живых покупателей.",
-    "Считаете стоимость клика и понимаете, окупилась ли реклама у конкретного инфлюенсера."
+    "Получаешь информацию только по живым покупателям: система отсекает накрученный фейковый трафик",
+    "Ведешь учет всех рекламных продвижений в одном удобном инструменте"
   ];
 
   return (
@@ -98,22 +109,14 @@ const SolutionSection = () => {
                     ))}
                   </div>
                   <div className="bg-background/50 rounded-2xl p-4 border border-border min-h-[300px] flex items-center justify-center overflow-hidden">
-                    {'video' in tile ? (
-                      <video 
-                        src={tile.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-auto rounded-lg object-contain"
-                      />
-                    ) : (
-                      <img 
-                        src={tile.image} 
-                        alt={`Скриншот шагов ${tile.steps.map(s => s.number).join('-')}`}
-                        className="w-full h-auto rounded-lg object-contain"
-                      />
-                    )}
+                    <video 
+                      src={tile.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-auto rounded-lg object-contain"
+                    />
                   </div>
                 </div>
                 {tileIndex < tiles.length - 1 && (
