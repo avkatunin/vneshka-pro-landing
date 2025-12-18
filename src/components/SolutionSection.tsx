@@ -54,18 +54,9 @@ const SolutionSection = () => {
   ];
 
   const benefits = [
-    {
-      title: "Деньги под контролем",
-      description: "Видите точное количество реальных переходов по каждому диплинку, а не абстрактные цифры из отчётов блогеров."
-    },
-    {
-      title: "Чистая аналитика", 
-      description: "Система отсекает ботов и фейковый трафик, показывая только живых покупателей."
-    },
-    {
-      title: "Реальные метрики вместо догадок",
-      description: "Считаете стоимость клика и понимаете, окупилась ли реклама у конкретного инфлюенсера."
-    }
+    "Видишь точное количество реальных переходов на продукт по каждой рекламной кампании",
+    "Система отсекает ботов и фейковый трафик, показывая только живых покупателей.",
+    "Считаете стоимость клика и понимаете, окупилась ли реклама у конкретного инфлюенсера."
   ];
 
   return (
@@ -147,11 +138,8 @@ const SolutionSection = () => {
               key={index}
               className={`p-8 rounded-3xl bg-card border-2 border-cyan-400 hover-lift transition-all duration-300 backdrop-blur-sm fade-in-up stagger-${index + 1}`}
             >
-              <h4 className="text-xl font-semibold mb-4 text-foreground">
-                {benefit.title}
-              </h4>
               <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
+                {benefit}
               </p>
             </div>
           ))}
