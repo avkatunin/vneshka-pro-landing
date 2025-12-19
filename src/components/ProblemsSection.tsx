@@ -1,5 +1,3 @@
-import { HelpCircle } from "lucide-react";
-
 const ProblemsSection = () => {
   const problems = [
     "Платишь за внешнее продвижение, но не понимаешь, сколько людей реально заинтересовалось продуктом",
@@ -27,7 +25,6 @@ const ProblemsSection = () => {
               key={index}
               className="p-6 sm:p-8 rounded-2xl bg-background border-2 border-orange-400 hover:shadow-card transition-all duration-300 hover:-translate-y-2"
             >
-              <HelpCircle className="w-8 h-8 sm:w-10 sm:h-10 text-orange-400 mb-4" />
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {problem}
               </p>
