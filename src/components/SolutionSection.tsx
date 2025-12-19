@@ -90,8 +90,8 @@ const SolutionSection = () => {
           <div className="bg-card rounded-3xl p-8 border border-border shadow-card">
             {tiles.map((tile, tileIndex) => (
               <div key={tileIndex}>
-                <div className="grid lg:grid-cols-2 gap-8 items-center py-8">
-                  <div className="space-y-6">
+                <div className="grid lg:grid-cols-4 gap-8 items-center py-8">
+                  <div className="space-y-6 lg:col-span-1">
                     {tile.steps.map((step, stepIndex) => (
                       <div key={stepIndex} className="flex gap-4 items-start">
                         <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
@@ -108,7 +108,7 @@ const SolutionSection = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="bg-background/50 rounded-2xl p-4 border border-border h-[300px] flex items-center justify-center overflow-hidden">
+                  <div className="bg-background/50 rounded-2xl p-4 border border-border h-[300px] flex items-center justify-center overflow-hidden lg:col-span-3">
                     <video 
                       src={tile.video}
                       autoPlay
