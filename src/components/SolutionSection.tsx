@@ -1,3 +1,4 @@
+import { CheckCircle } from "lucide-react";
 import addSkuVideo from "@/assets/add-sku.mp4";
 import step12Video from "@/assets/step-1-2.mp4";
 import dlinkVideo from "@/assets/dlink.mp4";
@@ -141,6 +142,7 @@ const SolutionSection = () => {
               key={index}
               className={`p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-card border-2 border-cyan-400 hover-lift transition-all duration-300 backdrop-blur-sm fade-in-up stagger-${index + 1}`}
             >
+              <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400 mb-4" />
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {benefit}
               </p>
