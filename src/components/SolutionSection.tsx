@@ -108,7 +108,7 @@ const SolutionSection = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="bg-background/50 rounded-2xl p-4 border border-border h-[300px] flex items-center justify-center overflow-hidden">
+                  <div className="bg-background/50 rounded-2xl p-4 border border-border h-[400px] flex items-center justify-center overflow-hidden">
                     <video 
                       src={tile.video}
                       autoPlay
