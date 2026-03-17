@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 
 const OfferSection = () => {
   const plans = [
-    { deeplinks: 1, price: 299, discount: null },
-    { deeplinks: 5, price: 1349, discount: 10 },
-    { deeplinks: 10, price: 2399, discount: 20 },
-    { deeplinks: 20, price: 4199, discount: 30 },
+    { deeplinks: 1, price: 149, discount: null },
+    { deeplinks: 5, price: 649, discount: 10 },
+    { deeplinks: 10, price: 1199, discount: 20 },
+    { deeplinks: 20, price: 1999, discount: 30 },
   ];
 
   return (
@@ -26,10 +26,14 @@ const OfferSection = () => {
           <div className="bg-card rounded-2xl p-4 sm:p-8 border-2 border-border shadow-card mb-8 sm:mb-12">
             <div className="space-y-2 sm:space-y-4">
               {plans.map((plan, index) => (
-                <div key={index} className="flex items-center justify-between py-3 sm:py-4 border-b border-border last:border-b-0 gap-2">
+                <div
+                  key={index}
+                  className="flex items-center justify-between py-3 sm:py-4 border-b border-border last:border-b-0 gap-2"
+                >
                   <div className="flex items-baseline gap-2 sm:gap-3 flex-wrap">
                     <span className="text-lg sm:text-2xl font-bold text-foreground">
-                      {plan.deeplinks} {plan.deeplinks === 1 ? 'диплинк' : 'диплинков'}
+                      {plan.deeplinks}{" "}
+                      {plan.deeplinks === 1 ? "диплинк" : "диплинков"}
                     </span>
                     {plan.discount && (
                       <span className="bg-accent px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-accent-foreground text-xs sm:text-sm font-semibold">
@@ -46,9 +50,9 @@ const OfferSection = () => {
           </div>
 
           <div className="text-center">
-            <Button 
-              variant="hero" 
-              size="lg" 
+            <Button
+              variant="hero"
+              size="lg"
               className="text-base sm:text-xl px-8 sm:px-12 py-6 sm:py-8 font-bold"
               asChild
             >
